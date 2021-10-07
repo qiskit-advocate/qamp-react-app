@@ -56,7 +56,7 @@ function App() {
             <Accordion>
               {F21issues.map(issue => {
                 return <AccordionItem title={`#${issue.number} ${issue.title}`}>
-                  <h3>{issue.assignee ? issue.assignee.login : 'blah'}</h3>
+                  <h3>{issue.title}</h3>
                   <ReactMarkdown className="markDownElem">{issue.body}</ReactMarkdown>
                 </AccordionItem>
               })}
