@@ -48,12 +48,15 @@ function App() {
         </HeaderName>
       </Header>
       <div style={{margin: "10px", marginTop: "50px"}}>
+        <h1 style={{paddingTop: "20px"}}>Qiskit Advocate Mentorship Program</h1>
+        <h1 style={{paddingBottom: "20px"}}>Project Summary</h1>
+        <p>Here you can see details of past and ongoing mentorship porjects</p>
         <Tabs>
           <Tab id="tab-1" label="Fall 2021">
             <Accordion>
               {F21issues.map(issue => {
                 return <AccordionItem title={`#${issue.number} ${issue.title}`}>
-                  <h3>{issue.title}</h3>
+                  <h3>{issue.assignee ? issue.assignee.login : 'blah'}</h3>
                   <ReactMarkdown className="markDownElem">{issue.body}</ReactMarkdown>
                 </AccordionItem>
               })}
